@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.app.bmicalculator.custom.CenteredToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Toolbar"
+        app:title="@string/title_main" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:clipToPadding="false"
+            android:padding="18dp"
+            tools:context=".activity.MainActivity">
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_gradient_btn"
+                android:ems="15"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calculate"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/enter_personal_details"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_edittext_outline"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                app:layout_constraintBottom_toTopOf="@id/btnCalculate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edName">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="26dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/calculate_body_mass_index"
+                    android:textColor="@color/half_opacity_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvHeight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="@string/weight"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@id/cardView2"
+                    app:layout_constraintEnd_toStartOf="@+id/tvHeight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="@string/height"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@id/cardView2"
+                    app:layout_constraintEnd_toStartOf="@+id/tvGender"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvWeight" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="@string/gender"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@id/cardView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvHeight" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.super_rabbit.wheel_picker.WheelPicker
+                            android:id="@+id/pickerWeight"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/wheel_picker_height"
+                            android:layout_marginEnd="6dp"
+                            app:layout_constraintEnd_toStartOf="@+id/pickerHeight"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:max="200"
+                            app:min="10"
+                            app:textSize="14sp"
+                            app:wheelItemCount="3" />
+
+                        <com.super_rabbit.wheel_picker.WheelPicker
+                            android:id="@+id/pickerHeight"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/wheel_picker_height"
+                            android:layout_marginEnd="6dp"
+                            app:layout_constraintEnd_toStartOf="@+id/pickerGender"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/pickerWeight"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:max="260"
+                            app:min="100"
+                            app:textSize="14sp"
+                            app:wheelItemCount="3" />
+
+                        <com.super_rabbit.wheel_picker.WheelPicker
+                            android:id="@+id/pickerGender"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/wheel_picker_height"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/pickerHeight"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:max="1"
+                            app:min="0"
+                            app:textSize="14sp"
+                            app:wheelItemCount="3"
+                            app:wrapSelectorWheel="false" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

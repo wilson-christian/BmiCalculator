@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Wilson BMI Calc</string>
+    <string name="calculate">Calculate</string>
+    <string name="title_main">Add BMI Details</string>
+    <string name="name">Name</string>
+
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <string name="body_mass_index">Body Mass Index</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="title_bmi_detail">BMI Details</string>
+    <string name="calculate_body_mass_index">Calculate Body Mass Index</string>
+    <string name="weight">Weight (Kg)</string>
+    <string name="height">Height (cm)</string>
+    <string name="gender">Gender</string>
+    <string name="bmi_range_default_text">Normal BMI range : 18.5kg/m2 – 25kg/m2</string>
+    <string name="enter_personal_details">Enter Personal Details</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+</resources>

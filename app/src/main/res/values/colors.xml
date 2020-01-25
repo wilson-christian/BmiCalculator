@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="mainGradientStart">#1b7ca0</color>
+    <color name="mainGradientEnd">#33d1a6</color>
+
+    <color name="statusBarGradientStart">#15637f</color>
+    <color name="statusBarGradientEnd">#249982</color>
+
+    <color name="half_opacity_white">#80ffffff</color>
+    <color name="half_opacity_gray">#80939393</color>
+</resources>

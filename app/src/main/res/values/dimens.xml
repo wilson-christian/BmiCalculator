@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ed_outline_padding">8dp</dimen>
+    <dimen name="wheel_picker_height">120dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="image_header_dimen">120dp</dimen>
+    <dimen name="image_header_top_margin">50dp</dimen>
+</resources>
